@@ -1,6 +1,23 @@
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Selector {
     public void selectorMethod() {
+        System.out.println("What would you like to do? \n- Geometry \n- Algebra \n- Calculus");
+        Scanner userInput = new Scanner(System.in);
+        String takeInput = userInput.nextLine().toUpperCase(Locale.ROOT);
+        if (takeInput.equals("GEOMETRY")) {
             Geometry g = new Geometry();
             g.geometryMethod();
         }
+        else if (takeInput.equals("ALGEBRA")) {
+
+        }
+        else if (takeInput.equals("CALCULUS")) {
+
+        }
+        else {
+
+        }
+    }
 }
