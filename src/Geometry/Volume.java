@@ -1,6 +1,5 @@
 package Geometry;
 
-import java.sql.SQLOutput;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -19,7 +18,7 @@ public class Volume {
                 String width = numberInput.nextLine();
                 System.out.println("What is the height of your object?");
                 String height = numberInput.nextLine();
-                System.out.println("Your selected values were \nHeight: " + height + "\nLength: " + length + "\nWidth: " + width + "\nIs that correct?");
+                System.out.println("Your selected values were \nHeight: " + height + "\nLength: " + length + "\nWidth: " + width + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
                 if (correctString.equals("Y")) {
@@ -41,11 +40,11 @@ public class Volume {
                 String radius = numberInput.nextLine();
                 System.out.println("What us the height of your object?");
                 String height = numberInput.nextLine();
-                System.out.println("Your selected values were \nRadius: " + radius + "\nHeight: " + height + "\nIs that correct?");
+                System.out.println("Your selected values were \nRadius: " + radius + "\nHeight: " + height + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
                 if (correctString.equals("Y")) {
-                    System.out.println("The area of the cylinder is: " + Math.pow(Integer.parseInt(radius), 2) * Integer.parseInt(height) * Math.PI);
+                    System.out.println("The volume of the cylinder is: " + Math.pow(Integer.parseInt(radius), 2) * Integer.parseInt(height) * Math.PI);
                     break;
                 } else if (correctString.equals("N")) {
                     System.out.println("Ok, let's try again.");
@@ -66,7 +65,7 @@ public class Volume {
                 String width = numberInput.nextLine();
                 System.out.println("What is the height of your object?");
                 String height = numberInput.nextLine();
-                System.out.println("Your selected values were \nHeight: " + height + "\nLength: " + length + "\nWidth: " + width + "\nIs that correct?");
+                System.out.println("Your selected values were \nHeight: " + height + "\nLength: " + length + "\nWidth: " + width + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
                 if (correctString.equals("Y")) {
