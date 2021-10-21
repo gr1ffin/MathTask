@@ -12,4 +12,5 @@ That's a great question. Haven't figured that out yet. Current plan is to have s
   * Polynomials
   * Graphing 
   * Factoring
+ 
 **DISCLAIMER!!** *The precalc is very unlikely to happen, because that seems hard. I don't know. I haven't looked it up yet.*
