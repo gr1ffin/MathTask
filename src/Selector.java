@@ -13,7 +13,8 @@ public class Selector {
             g.geometryMethod();
         }
         else if (takeInput.contains("ALGEBRA")) {
-
+            Algebra a = new Algebra();
+            a.algebraMethod();
         }
         else if (takeInput.contains("CALCULUS")) {
 
