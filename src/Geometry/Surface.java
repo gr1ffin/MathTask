@@ -10,7 +10,7 @@ public class Surface {
         System.out.println("- Rectangular Prism\n- Sphere\n- Cylinder\n- Triangular Prism\n- Pyramid");
         Scanner typeInput = new Scanner(System.in);
         String takeInput = typeInput.nextLine().toUpperCase(Locale.ROOT);
-        if (takeInput.equals(("RECTANGULAR PRISM"))) {
+        if (takeInput.contains(("RECTANGULAR PRISM"))) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the length of the rectangular prism?");
@@ -22,17 +22,17 @@ public class Surface {
                 System.out.println("Your selected values were \nHeight: " + height + "\nLength: " + length + "\nWidth: " + width + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
-                if (correctString.equals("Y")) {
+                if (correctString.contains("Y")) {
                     System.out.println("The area of the rectangular prism is: " + 2 * length * height * width);
                     break;
-                } else if (correctString.equals("N")) {
+                } else if (correctString.contains("N")) {
                     System.out.println("Ok, let's try again.");
                 } else {
                     System.out.println("Invalid input, please try again.");
                 }
             }
         }
-        else if (takeInput.equals("SPHERE")) {
+        else if (takeInput.contains("SPHERE")) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the radius of the base of your object?");
@@ -40,17 +40,17 @@ public class Surface {
                 System.out.println("Your selected values were \nRadius: " + radius + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
-                if (correctString.equals("Y")) {
+                if (correctString.contains("Y")) {
                     System.out.println("The volume of the sphere is: " + 4 * Math.PI * Math.pow(radius, 3));
                     break;
-                } else if (correctString.equals("N")) {
+                } else if (correctString.contains("N")) {
                     System.out.println("Ok, let's try again.");
                 } else {
                     System.out.println("Invalid input, please try again.");
                 }
             }
         }
-        else if (takeInput.equals("CYLINDER")) {
+        else if (takeInput.contains("CYLINDER")) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the radius of the base of your object?");
@@ -58,10 +58,10 @@ public class Surface {
                 System.out.println("Your selected values were \nRadius: " + radius + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
-                if (correctString.equals("Y")) {
+                if (correctString.contains("Y")) {
                     System.out.println("The volume of the cylinder is: " + 4 * Math.PI * Math.pow(radius, 2));
                     break;
-                } else if (correctString.equals("N")) {
+                } else if (correctString.contains("N")) {
                     System.out.println("Ok, let's try again.");
                 } else {
                     System.out.println("Invalid input, please try again.");
@@ -69,7 +69,7 @@ public class Surface {
 
             }
         }
-        else if (takeInput.equals("TRIANGULAR PRISM")) {
+        else if (takeInput.contains("TRIANGULAR PRISM")) {
             while(true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the length of the triangular prism?");
@@ -83,10 +83,10 @@ public class Surface {
                 System.out.println("Your selected values were \nLength: " + length + "\nHeight: " + height + "\nBase: " + base + "\nSide: " + side + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
-                if (correctString.equals("Y")) {
+                if (correctString.contains("Y")) {
                     System.out.println("The area of the triangular prism is: " + (base * height) + (2 * length * side) + (length * base));
                     break;
-                } else if (correctString.equals("N")) {
+                } else if (correctString.contains("N")) {
                     System.out.println("Ok, let's try again.");
                 } else {
                     System.out.println("Invalid input, please try again.");
@@ -94,7 +94,7 @@ public class Surface {
 
             }
         }
-        else if (takeInput.equals("PYRAMID")) {
+        else if (takeInput.contains("PYRAMID")) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the base of the pyramid??");
@@ -104,10 +104,10 @@ public class Surface {
                 System.out.println("Your selected values were \nBase: " + base + "\nSide: " + side + "\nIs that correct? (Y/N)");
                 Scanner checkInput = new Scanner(System.in);
                 String correctString = checkInput.nextLine().toUpperCase(Locale.ROOT);
-                if (correctString.equals("Y")) {
+                if (correctString.contains("Y")) {
                     System.out.println("The volume of the Pyramid is: " + Math.pow(base, 2) + (2 * base) * side);
                     break;
-                } else if (correctString.equals("N")) {
+                } else if (correctString.contains("N")) {
                     System.out.println("Ok, let's try again.");
                 } else {
                     System.out.println("Invalid input, please try again.");

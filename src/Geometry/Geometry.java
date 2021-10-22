@@ -9,11 +9,11 @@ public class Geometry {
         System.out.println("- Volume \n- Surface Area");
         Scanner geoInput = new Scanner(System.in);
         String answerInput = geoInput.nextLine().toUpperCase(Locale.ROOT);
-        if (answerInput.equals("VOLUME")) {
+        if (answerInput.contains("VOLUME")) {
             Volume v  = new Volume();
             v.volumeMethod();
         }
-        else if (answerInput.equals("SURFACE AREA")) {
+        else if (answerInput.contains("SURFACE AREA")) {
             Surface s = new Surface();
             s.surfaceMethod();
         }

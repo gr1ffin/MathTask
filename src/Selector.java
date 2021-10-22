@@ -8,14 +8,14 @@ public class Selector {
         System.out.println("What would you like to do? \n- Geometry \n- Algebra \n- Calculus");
         Scanner userInput = new Scanner(System.in);
         String takeInput = userInput.nextLine().toUpperCase(Locale.ROOT);
-        if (takeInput.equals("GEOMETRY")) {
+        if (takeInput.contains("GEOMETRY")) {
             Geometry g = new Geometry();
             g.geometryMethod();
         }
-        else if (takeInput.equals("ALGEBRA")) {
+        else if (takeInput.contains("ALGEBRA")) {
 
         }
-        else if (takeInput.equals("CALCULUS")) {
+        else if (takeInput.contains("CALCULUS")) {
 
         }
         else {
