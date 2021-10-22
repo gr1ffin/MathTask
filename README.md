@@ -2,7 +2,7 @@
 #### You might be asking yourself, what is this?
 That's a great question. Haven't figured that out yet. Current plan is to have some form of automatic calculator, split up into different subjects.
 
-* Geometry
+* Geometry.Geometry
   * Volume
   * Surface Area
 * Algebra

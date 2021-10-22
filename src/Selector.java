@@ -1,3 +1,5 @@
+import Geometry.Geometry;
+
 import java.util.Locale;
 import java.util.Scanner;
 
