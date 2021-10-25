@@ -11,13 +11,15 @@ public class Calculator {
             double inputOne = Double.parseDouble(userInput.nextLine());
             String toDo = userInput.nextLine();
             double inputTwo = Double.parseDouble(userInput.nextLine());
-            double answer = 0;
-            if (toDo.equals("+")) {answer = inputOne + inputTwo;}
-            else if (toDo.equals("-")) {answer = inputOne - inputTwo;}
-            else if (toDo.equals("*")) {answer = inputOne * inputTwo;}
-            else if (toDo.equals("/")) {answer = inputOne / inputTwo;}
-            else if (toDo.equals("^")) {answer = Math.pow(inputOne, inputTwo);}
-            else if (toDo.equals("sq")) {answer = Math.sqrt(inputOne);}
+            double answer = switch (toDo) {
+                case "+" -> inputOne + inputTwo;
+                case "-" -> inputOne - inputTwo;
+                case "*" -> inputOne * inputTwo;
+                case "/" -> inputOne / inputTwo;
+                case "^" -> Math.pow(inputOne, inputTwo);
+                case "sq" -> Math.sqrt(inputOne);
+                default -> 0;
+            };
             System.out.println(answer);
             System.out.println("Would you like to: \n- Continue with the Current Problem\n- Do a new Problem \n- Quit");
             Scanner secondQuestion = new Scanner(System.in);
@@ -32,44 +34,45 @@ public class Calculator {
                         System.out.println(answer);
                         Scanner continueAgain = new Scanner(System.in);
                         String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) { continue; }
+                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
                         else { break;}}
                     else if (continuedOp.equals("-")) {answer = answer - continuedInput;
                         System.out.println(answer);
                         Scanner continueAgain = new Scanner(System.in);
                         String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) { continue; }
+                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
                         else { break;}}
                     else if ((continuedOp.equals("*")) || (toDo.equals("x"))) {answer = answer * continuedInput;
                         System.out.println(answer);
                         Scanner continueAgain = new Scanner(System.in);
                         String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) { continue; }
+                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
                         else { break;}}
                     else if (continuedOp.equals("/")) {answer = answer / continuedInput;
                         System.out.println(answer);
                         Scanner continueAgain = new Scanner(System.in);
                         String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) { continue; }
+                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
                         else { break;}}
                     else if (continuedOp.equals("^")) {answer = Math.pow(answer, continuedInput);
                         System.out.println(answer);
                         Scanner continueAgain = new Scanner(System.in);
                         String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) { continue; }
+                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
                         else { break;}}
                     else if (continuedOp.equals("sq")) { answer = Math.sqrt(answer);
                         System.out.println(answer);
                         Scanner continueAgain = new Scanner(System.in);
                         String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) { continue; }
+                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
                         else { break;}}
 
-                    else {continue;}
+                    else {
+                        System.out.println("Continuing");}
                 }
             }
             else if (continueInput.contains("NEW")) {
-                continue;
+                System.out.println("Continuing");
             }
             else if (continueInput.contains("QUIT")) {
                 break;
