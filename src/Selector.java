@@ -1,3 +1,4 @@
+import Algebra.Algebra;
 import Geometry.Geometry;
 
 import java.util.Locale;
