@@ -19,4 +19,3 @@ That's a great question. Haven't figured that out yet. Current plan is to have s
  man I don't even know if I can get the algebra part working this is hard
 
 
-> Trello for this project is available [here](https://trello.com/b/j7YWUO5m/create-task).
