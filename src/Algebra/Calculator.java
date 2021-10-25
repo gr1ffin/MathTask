@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Calculator {
     public void calcMethod() {
         while(true) {
-            System.out.println("Here is how the calculator works. \nPut your first input, hit Enter. Then the sign (+,-,*,/,^), hit Enter. Finally, the second input, hit Enter. \nExample: \n1\n+\n1\nInput:\n");
+            System.out.println("Here is how the calculator works. \nPut your first input, hit Enter. Then the sign (+,-,*,/,^, sq (square root)), hit Enter. Finally, the second input, hit Enter. \nExample: \n1\n+\n1\nInput:\n");
             Scanner userInput = new Scanner(System.in);
             double inputOne = Double.parseDouble(userInput.nextLine());
             String toDo = userInput.nextLine();
@@ -17,6 +17,7 @@ public class Calculator {
             else if (toDo.equals("*")) {answer = inputOne * inputTwo;}
             else if (toDo.equals("/")) {answer = inputOne / inputTwo;}
             else if (toDo.equals("^")) {answer = Math.pow(inputOne, inputTwo);}
+            else if (toDo.equals("sq")) {answer = Math.sqrt(inputOne);}
             System.out.println(answer);
             System.out.println("Would you like to: \n- Continue with the Current Problem\n- Do a new Problem \n- Quit");
             Scanner secondQuestion = new Scanner(System.in);
@@ -57,6 +58,13 @@ public class Calculator {
                         String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
                         if (continuePrompt.contains("CONT")) { continue; }
                         else { break;}}
+                    else if (continuedOp.equals("sq")) { answer = Math.sqrt(answer);
+                        System.out.println(answer);
+                        Scanner continueAgain = new Scanner(System.in);
+                        String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
+                        if (continuePrompt.contains("CONT")) { continue; }
+                        else { break;}}
+
                     else {continue;}
                 }
             }
