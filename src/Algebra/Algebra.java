@@ -11,10 +11,11 @@ public class Algebra {
 
         }
         else if (takeInput.contains("CALCULATOR")) {
-
+            Calculator ca = new Calculator();
+            ca.calcMethod();
         }
         else {
-            continue;
+            System.out.println("fail");
         }
     }
 }
