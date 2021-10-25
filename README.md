@@ -15,5 +15,10 @@ That's a great question. Haven't figured that out yet. Current plan is to have s
   * Graphing 
   * Factoring
  
+<<<<<<< HEAD
  ~~*The pre-calc is very unlikely to happen, because that seems hard. I don't know. I haven't looked it up yet.*~~
  man I don't even know if I can get the algebra part working this is hard 
+=======
+
+
+> Trello for this project is available [here](https://trello.com/b/j7YWUO5m/create-task).
