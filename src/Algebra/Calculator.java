@@ -18,6 +18,7 @@ public class Calculator {
                 case "/" -> inputOne / inputTwo;
                 case "^" -> Math.pow(inputOne, inputTwo);
                 case "sq" -> Math.sqrt(inputOne);
+                case "cube" -> Math.cbrt(inputOne);
                 default -> 0;
             };
             System.out.println(answer);
