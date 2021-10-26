@@ -9,7 +9,8 @@ public class Algebra {
         Scanner userInput = new Scanner(System.in);
         String takeInput = userInput.nextLine().toUpperCase(Locale.ROOT);
         if (takeInput.contains("SOLVE")) {
-
+            Solve so = new Solve();
+            so.solveMethod();
         }
         else if (takeInput.contains("CALCULATOR")) {
             Calculator ca = new Calculator();

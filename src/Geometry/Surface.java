@@ -115,7 +115,7 @@ public class Surface {
             }
         }
         else {
-
+            System.out.println("Invalid Input, please try again.");
         }
     }
 }

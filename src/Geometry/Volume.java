@@ -27,10 +27,8 @@ public class Volume {
                         break;
                     } else if (correctString.contains("N")) {
                         System.out.println("Ok, let's try again.");
-                        continue;
                     } else {
                         System.out.println("Invalid input, please try again.");
-                        continue;
                     }
                 }
             } else if (volumeInput.contains("CYLINDER")) {
@@ -48,10 +46,8 @@ public class Volume {
                         break;
                     } else if (correctString.contains("N")) {
                         System.out.println("Ok, let's try again.");
-                        continue;
                     } else {
                         System.out.println("Invalid input, please try again.");
-                        continue;
                     }
 
                 }

@@ -5,8 +5,9 @@ import java.util.Scanner;
 
 public class Calculator {
     public void calcMethod() {
-        while(true) {
-            System.out.println("Here is how the calculator works. \nPut your first input, hit Enter. Then the sign (+,-,*,/,^, sq (square root)), hit Enter. Finally, the second input, hit Enter. \nExample: \n1\n+\n1\nInput:\n");
+        boolean repeat = true;
+        while(repeat) {
+            System.out.println("Here is how the calculator works. \nPut your first input, hit Enter. Then the sign (+,-,*,/,^, sq (square root)) cube (cube root), hit Enter. Finally, the second input, hit Enter. \nExample: \n1\n+\n1\nIf you would like to quit at any time, type QUIT.\nInput:\n");
             Scanner userInput = new Scanner(System.in);
             double inputOne = Double.parseDouble(userInput.nextLine());
             String toDo = userInput.nextLine();
@@ -22,62 +23,26 @@ public class Calculator {
                 default -> 0;
             };
             System.out.println(answer);
-            System.out.println("Would you like to: \n- Continue with the Current Problem\n- Do a new Problem \n- Quit");
-            Scanner secondQuestion = new Scanner(System.in);
-            String continueInput = secondQuestion.nextLine().toUpperCase(Locale.ROOT);
-            if (continueInput.contains("CONTINUE")) {
-                while(true) {
-                    System.out.println("Operation first, then value. ");
-                    Scanner newInput = new Scanner(System.in);
-                    String continuedOp = newInput.nextLine();
-                    double continuedInput = Double.parseDouble(newInput.nextLine());
-                    if (continuedOp.equals("+")) {answer = answer + continuedInput;
-                        System.out.println(answer);
-                        Scanner continueAgain = new Scanner(System.in);
-                        String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
-                        else { break;}}
-                    else if (continuedOp.equals("-")) {answer = answer - continuedInput;
-                        System.out.println(answer);
-                        Scanner continueAgain = new Scanner(System.in);
-                        String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
-                        else { break;}}
-                    else if ((continuedOp.equals("*")) || (toDo.equals("x"))) {answer = answer * continuedInput;
-                        System.out.println(answer);
-                        Scanner continueAgain = new Scanner(System.in);
-                        String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
-                        else { break;}}
-                    else if (continuedOp.equals("/")) {answer = answer / continuedInput;
-                        System.out.println(answer);
-                        Scanner continueAgain = new Scanner(System.in);
-                        String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
-                        else { break;}}
-                    else if (continuedOp.equals("^")) {answer = Math.pow(answer, continuedInput);
-                        System.out.println(answer);
-                        Scanner continueAgain = new Scanner(System.in);
-                        String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
-                        else { break;}}
-                    else if (continuedOp.equals("sq")) { answer = Math.sqrt(answer);
-                        System.out.println(answer);
-                        Scanner continueAgain = new Scanner(System.in);
-                        String continuePrompt = continueAgain.nextLine().toUpperCase(Locale.ROOT);
-                        if (continuePrompt.contains("CONT")) {System.out.println("Continuing");}
-                        else { break;}}
-
-                    else {
-                        System.out.println("Continuing");}
+            while(repeat) {
+                Scanner newInput = new Scanner(System.in);
+                String continuedOp = newInput.nextLine().toUpperCase(Locale.ROOT);
+                if (continuedOp.contains("QUIT")) {repeat = false; break;}
+                String continuedInput = newInput.nextLine().toUpperCase(Locale.ROOT);
+                if (continuedInput.contains("QUIT")) {repeat = false; break;}
+                else {
+                    double inputThree = Double.parseDouble(continuedInput);
+                    answer = switch (continuedOp) {
+                        case "+" -> answer + inputThree;
+                        case "-" -> answer - inputThree;
+                        case "*" -> answer * inputThree;
+                        case "/" -> answer / inputThree;
+                        case "^" -> Math.pow(answer, inputThree);
+                        case "sq" -> Math.sqrt(answer);
+                        case "cube" -> Math.cbrt(answer);
+                        default -> answer;
+                    };
+                    System.out.print(answer);
                 }
-            }
-            else if (continueInput.contains("NEW")) {
-                System.out.println("Continuing");
-            }
-            else if (continueInput.contains("QUIT")) {
-                break;
-
             }
         }
     }
