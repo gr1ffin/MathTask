@@ -5,12 +5,13 @@ import java.util.Scanner;
 
 public class Algebra {
     public void algebraMethod() {
-        System.out.println("Would you like to use a Calculator or Solve for a variable?");
+        System.out.println("Would you like to use a Calculator or Evaluate an expression at a specific value?\n- Calculator\n- Evaluate\n");
         Scanner userInput = new Scanner(System.in);
         String takeInput = userInput.nextLine().toUpperCase(Locale.ROOT);
-        if (takeInput.contains("SOLVE")) {
-            Solve so = new Solve();
-            so.solveMethod();
+        if (takeInput.contains("EVALUATE")) {
+            LinearEquations linearEquation = new LinearEquations();
+            linearEquation.linearMethod();
+
         }
         else if (takeInput.contains("CALCULATOR")) {
             Calculator ca = new Calculator();
