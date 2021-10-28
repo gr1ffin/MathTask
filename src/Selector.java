@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Selector {
     public void selectorMethod() {
-        System.out.println("What would you like to do? \n- Geometry \n- Algebra \n- Calculus");
+        System.out.println("What would you like to do? \n- Geometry \n- Algebra\n");
         Scanner userInput = new Scanner(System.in);
         String takeInput = userInput.nextLine().toUpperCase(Locale.ROOT);
         if (takeInput.contains("GEOMETRY")) {
@@ -17,10 +17,8 @@ public class Selector {
             Algebra a = new Algebra();
             a.algebraMethod();
         }
-        else if (takeInput.contains("CALCULUS")) {
-
-        }
         else {
+            System.out.println("Invalid Input. Please try again.");
 
         }
     }

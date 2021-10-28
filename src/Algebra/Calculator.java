@@ -23,7 +23,7 @@ public class Calculator {
                 default -> 0;
             };
             System.out.println(answer);
-            while(repeat) {
+            while(true) {
                 Scanner newInput = new Scanner(System.in);
                 String continuedOp = newInput.nextLine().toUpperCase(Locale.ROOT);
                 if (continuedOp.contains("QUIT")) {repeat = false; break;}
