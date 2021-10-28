@@ -10,7 +10,7 @@ public class Surface {
         System.out.println("- Rectangular Prism\n- Sphere\n- Cylinder\n- Triangular Prism\n- Pyramid");
         Scanner typeInput = new Scanner(System.in);
         String takeInput = typeInput.nextLine().toUpperCase(Locale.ROOT);
-        if (takeInput.contains(("RECTANGULAR PRISM"))) {
+        if (takeInput.contains(("RECT"))) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the length of the rectangular prism?");
@@ -32,7 +32,7 @@ public class Surface {
                 }
             }
         }
-        else if (takeInput.contains("SPHERE")) {
+        else if (takeInput.contains("SPH")) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the radius of the base of your object?");
@@ -50,7 +50,7 @@ public class Surface {
                 }
             }
         }
-        else if (takeInput.contains("CYLINDER")) {
+        else if (takeInput.contains("CYL")) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the radius of the base of your object?");
@@ -69,7 +69,7 @@ public class Surface {
 
             }
         }
-        else if (takeInput.contains("TRIANGULAR PRISM")) {
+        else if (takeInput.contains("TRI")) {
             while(true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the length of the triangular prism?");
@@ -94,7 +94,7 @@ public class Surface {
 
             }
         }
-        else if (takeInput.contains("PYRAMID")) {
+        else if (takeInput.contains("PYR")) {
             while (true) {
                 Scanner numberInput = new Scanner(System.in);
                 System.out.println("What is the base of the pyramid??");

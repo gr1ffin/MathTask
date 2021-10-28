@@ -9,11 +9,11 @@ public class Selector {
         System.out.println("What would you like to do? \n- Geometry \n- Algebra\n");
         Scanner userInput = new Scanner(System.in);
         String takeInput = userInput.nextLine().toUpperCase(Locale.ROOT);
-        if (takeInput.contains("GEOMETRY")) {
+        if (takeInput.contains("GEO")) {
             Geometry g = new Geometry();
             g.geometryMethod();
         }
-        else if (takeInput.contains("ALGEBRA")) {
+        else if (takeInput.contains("ALG")) {
             Algebra a = new Algebra();
             a.algebraMethod();
         }
