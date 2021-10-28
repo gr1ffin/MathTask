@@ -16,4 +16,4 @@ Well. I finished. Hopefully.
 ### Will you ever add more? 
 Probably not. The only reason I did this so early (my class hasn't started working on their tasks yet, they don't know how to code) was so I could have free time in that class to be able to learn C# and Unity. I'll link the rep to it here whenever I make it, but I'll be working on a game. 
 
-Follow my (twitter)[https://twitter.com/gr1ffinvr]
+Follow my [twitter](https://twitter.com/gr1ffinvr)
