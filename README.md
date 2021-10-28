@@ -3,19 +3,12 @@
 That's a great question. Haven't figured that out yet. Current plan is to have some form of automatic calculator, split up into different subjects.
 
 
-## To Do:
-* ~~Geometry.Geometry~~
-  * ~~Volume~~
-  * ~~Surface Area~~
+Well. I finished. Hopefully. 
+
+### What can this code do?
+* Geometry
+** Volume
+** Surface Area
 * Algebra
-  * Solving for X, Y, other variable
-  * Simple calculator - equation -> answer.
-* Pre-Calculus/Calculus
-  * Polynomials
-  * Graphing 
-  * Factoring
-  
- ~~*The pre-calc is very unlikely to happen, because that seems hard. I don't know. I haven't looked it up yet.*~~
- man I don't even know if I can get the algebra part working this is hard
-
-
+** Simple Calculator
+** Solve an equation when X is equal something. 
