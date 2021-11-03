@@ -3,7 +3,7 @@
 That's a great question. Haven't figured that out yet. Current plan is to have some form of automatic calculator, split up into different subjects.
 
 
-#### Well. I finished. Hopefully. 
+#### ~~Well. I finished. Hopefully.~~ Spoiler: I didn't. I'm re-doing everything so it works through a GUI now.
 
 ### What can this code do?
 * Geometry
