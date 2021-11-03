@@ -16,6 +16,32 @@ public class MathGUI {
     private JPanel vol2;
     private JPanel vol3;
     private JTextArea advancedMathCalculatorWhatTextArea;
+    private JTextField cylinder1;
+    private JTextField cylinder2;
+    private JTextField cube1;
+    private JTextField cube2;
+    private JTextField cube3;
+    private JTextField triangle1;
+    private JTextField triangle2;
+    private JTextField triangle3;
+    private JTabbedPane tabbedPane5;
+    private JPanel sur1;
+    private JPanel sur2;
+    private JPanel sur3;
+    private JPanel sur4;
+    private JPanel sur5;
+    private JTextField cubeB2;
+    private JTextField cubeB3;
+    private JTextField sphere1;
+    private JTextField cylinderB1;
+    private JTextField cylinderB2;
+    private JTextField triangleB1;
+    private JTextField triangleB2;
+    private JTextField triangleB3;
+    private JTextField triangleB4;
+    private JTextField textField11;
+    private JTextField textField12;
+    private JTextField cubeB1;
 
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
