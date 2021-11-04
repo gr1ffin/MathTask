@@ -9,7 +9,12 @@ I overcomplicated this way too much. Oh well.
 ### What can this code do?
 * Geometry
    * Volume
+      * Cube/Rectangle
+      * Cylinder
+      * Tringular Prism (needs fixing)
    * Surface Area
+     * Cube/Rectangle
+     * 
 * Algebra
    * Simple Calculator
    * Solve an equation when X is equal something. 
