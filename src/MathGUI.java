@@ -31,7 +31,6 @@ public class MathGUI {
     private JPanel sur2;
     private JPanel sur3;
     private JPanel sur4;
-    private JPanel sur5;
     private JTextField cubeB2;
     private JTextField cubeB3;
     private JTextField sphere1;
@@ -41,10 +40,7 @@ public class MathGUI {
     private JTextField triangleB2;
     private JTextField triangleB3;
     private JTextField triangleB4;
-    private JTextField pyramid1;
-    private JTextField pyramid2;
     private JTextField cubeB1;
-    private JButton pyramidButton;
     private JButton cubeButton2;
     private JButton sphereButton;
     private JButton cylinderButton2;
@@ -55,18 +51,10 @@ public class MathGUI {
     private JTextArea statement3;
     private JTextArea statement1;
     private JTextArea statement2;
-    private JTextArea sideBaseTextArea;
-    private JTextArea lengthWidthHeightTextArea2;
-    private JTextArea radiusTextArea;
-    private JTextArea radiusHeightTextArea2;
-    private JTextArea lengthHeightSideBaseTextArea;
-
-    public static String he = "Height";
-    public static String le = "Length";
-    public static String wi = "Width";
-    public static String ra = "Radius";
-    public static String ba = "Base";
-    public static String si = "Side";
+    private JTextArea statement4;
+    private JTextArea statement5;
+    private JTextArea statement6;
+    private JTextArea statement7;
 
     public static double l = 0;
     public static double w = 0;
@@ -102,15 +90,56 @@ public class MathGUI {
         triangleButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                l = Double.parseDouble(cubeA1.getText());
-                w = Double.parseDouble(cubeA2.getText());
-                h = Double.parseDouble(cubeA3.getText());
+                l = Double.parseDouble(triangleA1.getText());
+                w = Double.parseDouble(triangleA2.getText());
+                h = Double.parseDouble(triangleA3.getText());
                 Methods.triangleVolume();
                 System.out.println(Methods.varOutput);
                 statement3.setText(String.valueOf(Methods.varOutput));
-
             }
         });
+        cubeButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                l = Double.parseDouble(cubeB1.getText());
+                w = Double.parseDouble(cubeB2.getText());
+                h = Double.parseDouble(cubeB3.getText());
+                Methods.cubeSurface();
+                System.out.println(Methods.varOutput);
+                statement4.setText(String.valueOf(Methods.varOutput));
+            }
+        });
+        sphereButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                r = Double.parseDouble(sphere1.getText());
+                Methods.sphereSurface();
+                System.out.println(Methods.varOutput);
+                statement5.setText(String.valueOf(Methods.varOutput));
+            }
+        });
+        cylinderButton2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                r = Double.parseDouble(cylinderB1.getText());
+                h = Double.parseDouble(cylinderB2.getText());
+                Methods.cylinderSurface();
+                System.out.println(Methods.varOutput);
+                statement6.setText(String.valueOf(Methods.varOutput));
+            }
+        });
+        /* triangleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                l = Double.parseDouble(triangleB1.getText());
+                h = Double.parseDouble(triangleB2.getText());
+                s = Double.parseDouble(triangleB3.getText());
+                b = Double.parseDouble(triangleB4.getText());
+                Methods.triangleSurface();
+                System.out.println(Methods.varOutput);
+                statement7.setText(String.valueOf(Methods.varOutput));
+            }
+        });*/
     }
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
