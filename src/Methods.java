@@ -9,7 +9,10 @@ public class Methods {
         varOutput = MathGUI.h * Math.pow((MathGUI.r), 2) * Math.PI;
     }
     public static void triangleVolume() {
-        varOutput = 0.5 * MathGUI.l * MathGUI.w * MathGUI.h;
+        double a = MathGUI.ba;
+        double b = MathGUI.bb;
+        double c = MathGUI.bc;
+        varOutput = 0.25 * MathGUI.h * Math.sqrt((- Math.pow(a, 4) + (2 * Math.pow(a * b, 2)) + (2 *(Math.pow(a * c, 2))) - (Math.pow(b, 4)) + (2 * (Math.pow(b * c, 2))) - Math.pow(c, 4)));
     }
     public static void cubeSurface() {
         varOutput = 2 * ((MathGUI.w * MathGUI.l) + (MathGUI.h * MathGUI.l) + (MathGUI.h + MathGUI.l));
@@ -20,7 +23,12 @@ public class Methods {
     public static void cylinderSurface() {
         varOutput = (2 * Math.PI * MathGUI.r * MathGUI.h) + (2 * Math.PI * Math.pow(MathGUI.r, 2));
     }
-    /*public static void triangleSurface() {
-        varOutput = (MathGUI.b * MathGUI.h ) + (2 * MathGUI.l * MathGUI.s) + (MathGUI.l * MathGUI.b);
-    }*/
+    public static void triangleSurface() {
+        double a = MathGUI.ba;
+        double b = MathGUI.bb;
+        double c = MathGUI.bc;
+        double s = ((a + b + c)/2);
+        double aOfB = Math.sqrt(s * (s-a)*(s-b)*(s-c));
+        varOutput = (2*aOfB) + ((a+b+c)*MathGUI.h);
+    }
 }

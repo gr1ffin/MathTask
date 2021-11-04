@@ -55,6 +55,8 @@ public class MathGUI {
     private JTextArea statement5;
     private JTextArea statement6;
     private JTextArea statement7;
+    private JTextField triangleA4;
+    private JTextField triangleB5;
 
     public static double l = 0;
     public static double w = 0;
@@ -62,7 +64,9 @@ public class MathGUI {
     public static double r = 0;
     public static double s = 0;
     public static double b = 0;
-
+    public static double ba = 0;
+    public static double bb = 0;
+    public static double bc = 0;
 
 
     public MathGUI() {
@@ -90,9 +94,10 @@ public class MathGUI {
         triangleButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                l = Double.parseDouble(triangleA1.getText());
-                w = Double.parseDouble(triangleA2.getText());
-                h = Double.parseDouble(triangleA3.getText());
+                h = Double.parseDouble(triangleA1.getText());
+                bc = Double.parseDouble(triangleA2.getText());
+                bb = Double.parseDouble(triangleA3.getText());
+                ba = Double.parseDouble(triangleA4.getText());
                 Methods.triangleVolume();
                 System.out.println(Methods.varOutput);
                 statement3.setText(String.valueOf(Methods.varOutput));
@@ -128,18 +133,18 @@ public class MathGUI {
                 statement6.setText(String.valueOf(Methods.varOutput));
             }
         });
-        /* triangleButton.addActionListener(new ActionListener() {
+        triangleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                l = Double.parseDouble(triangleB1.getText());
-                h = Double.parseDouble(triangleB2.getText());
-                s = Double.parseDouble(triangleB3.getText());
-                b = Double.parseDouble(triangleB4.getText());
+                h = Double.parseDouble(triangleB1.getText());
+                ba = Double.parseDouble(triangleB2.getText());
+                bb = Double.parseDouble(triangleB3.getText());
+                bc = Double.parseDouble(triangleB4.getText());
                 Methods.triangleSurface();
                 System.out.println(Methods.varOutput);
                 statement7.setText(String.valueOf(Methods.varOutput));
             }
-        });*/
+        });
     }
 
     public static void main(String[] args) throws UnsupportedLookAndFeelException, ClassNotFoundException, InstantiationException, IllegalAccessException {
