@@ -157,7 +157,6 @@ public class MathGUI {
         SwingUtilities.updateComponentTreeUI(frame);
         frame.pack();
         frame.setVisible(true);
-
     }
 }
 

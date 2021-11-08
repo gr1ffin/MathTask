@@ -1,7 +1,6 @@
 public class Methods {
 
     public static double varOutput = 0;
-    MathGUI m = new MathGUI();
     public static void cubeVolume() {
         varOutput = MathGUI.l * MathGUI.w * MathGUI.h;
     }
@@ -12,8 +11,10 @@ public class Methods {
         double a = MathGUI.ba;
         double b = MathGUI.bb;
         double c = MathGUI.bc;
-        varOutput = 0.25 * MathGUI.h * Math.sqrt((- Math.pow(a, 4) + (2 * Math.pow(a * b, 2)) + (2 *(Math.pow(a * c, 2))) - (Math.pow(b, 4)) + (2 * (Math.pow(b * c, 2))) - Math.pow(c, 4)));
-    }
+        double s = ((a + b + c)/2);
+        double aOfB = Math.sqrt(s * (s-a)*(s-b)*(s-c));
+        varOutput = aOfB * MathGUI.h;
+}
     public static void cubeSurface() {
         varOutput = 2 * ((MathGUI.w * MathGUI.l) + (MathGUI.h * MathGUI.l) + (MathGUI.h + MathGUI.l));
     }
