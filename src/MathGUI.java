@@ -56,6 +56,16 @@ public class MathGUI {
     private JTextArea statement6;
     private JTextArea statement7;
     private JTextField triangleA4;
+    private JTextArea calcText;
+    private JButton divide;
+    private JButton power;
+    private JButton minus;
+    private JButton multi;
+    private JButton plus;
+    private JButton cubed;
+    private JButton equals;
+    private JButton squared;
+    private JButton clearButton;
     private JTextField triangleB5;
 
     public static double l = 0;
@@ -67,18 +77,20 @@ public class MathGUI {
     public static double ba = 0;
     public static double bb = 0;
     public static double bc = 0;
+    public static String toDo;
 
 
     public MathGUI() {
+        AlgMethods alg = new AlgMethods();
         cubeButton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 l = Double.parseDouble(cubeA1.getText());
                 w = Double.parseDouble(cubeA2.getText());
                 h = Double.parseDouble(cubeA3.getText());
-                Methods.cubeVolume();
-                System.out.println(Methods.varOutput);
-                statement1.setText(String.valueOf(Methods.varOutput));
+                GeoMethods.cubeVolume();
+                System.out.println(GeoMethods.varOutput);
+                statement1.setText(String.valueOf(GeoMethods.varOutput));
             }
         });
         cylinderButton1.addActionListener(new ActionListener() {
@@ -86,9 +98,9 @@ public class MathGUI {
             public void actionPerformed(ActionEvent e) {
                 r = Double.parseDouble(cylinderA1.getText());
                 h = Double.parseDouble(cylinderA2.getText());
-                Methods.cylinderVolume();
-                System.out.println(Methods.varOutput);
-                statement2.setText(String.valueOf(Methods.varOutput));
+                GeoMethods.cylinderVolume();
+                System.out.println(GeoMethods.varOutput);
+                statement2.setText(String.valueOf(GeoMethods.varOutput));
             }
         });
         triangleButton1.addActionListener(new ActionListener() {
@@ -98,9 +110,9 @@ public class MathGUI {
                 bc = Double.parseDouble(triangleA2.getText());
                 bb = Double.parseDouble(triangleA3.getText());
                 ba = Double.parseDouble(triangleA4.getText());
-                Methods.triangleVolume();
-                System.out.println(Methods.varOutput);
-                statement3.setText(String.valueOf(Methods.varOutput));
+                GeoMethods.triangleVolume();
+                System.out.println(GeoMethods.varString);
+                statement3.setText(String.valueOf(GeoMethods.varString));
             }
         });
         cubeButton2.addActionListener(new ActionListener() {
@@ -109,18 +121,18 @@ public class MathGUI {
                 l = Double.parseDouble(cubeB1.getText());
                 w = Double.parseDouble(cubeB2.getText());
                 h = Double.parseDouble(cubeB3.getText());
-                Methods.cubeSurface();
-                System.out.println(Methods.varOutput);
-                statement4.setText(String.valueOf(Methods.varOutput));
+                GeoMethods.cubeSurface();
+                System.out.println(GeoMethods.varOutput);
+                statement4.setText(String.valueOf(GeoMethods.varOutput));
             }
         });
         sphereButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 r = Double.parseDouble(sphere1.getText());
-                Methods.sphereSurface();
-                System.out.println(Methods.varOutput);
-                statement5.setText(String.valueOf(Methods.varOutput));
+                GeoMethods.sphereSurface();
+                System.out.println(GeoMethods.varOutput);
+                statement5.setText(String.valueOf(GeoMethods.varOutput));
             }
         });
         cylinderButton2.addActionListener(new ActionListener() {
@@ -128,9 +140,9 @@ public class MathGUI {
             public void actionPerformed(ActionEvent e) {
                 r = Double.parseDouble(cylinderB1.getText());
                 h = Double.parseDouble(cylinderB2.getText());
-                Methods.cylinderSurface();
-                System.out.println(Methods.varOutput);
-                statement6.setText(String.valueOf(Methods.varOutput));
+                GeoMethods.cylinderSurface();
+                System.out.println(GeoMethods.varOutput);
+                statement6.setText(String.valueOf(GeoMethods.varOutput));
             }
         });
         triangleButton.addActionListener(new ActionListener() {
@@ -140,9 +152,80 @@ public class MathGUI {
                 ba = Double.parseDouble(triangleB2.getText());
                 bb = Double.parseDouble(triangleB3.getText());
                 bc = Double.parseDouble(triangleB4.getText());
-                Methods.triangleSurface();
-                System.out.println(Methods.varOutput);
-                statement7.setText(String.valueOf(Methods.varOutput));
+                GeoMethods.triangleSurface();
+                System.out.println(GeoMethods.varOutput);
+                statement7.setText(String.valueOf(GeoMethods.varOutput));
+            }
+        });
+        plus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = Double.parseDouble(calcText.getText());
+                toDo = "+";
+                calcText.setText("");
+            }
+        });
+        minus.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = Double.parseDouble(calcText.getText());
+                toDo = "-";
+                calcText.setText("");
+            }
+        });
+        multi.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = Double.parseDouble(calcText.getText());
+                toDo = "*";
+                calcText.setText("");
+            }
+        });
+        divide.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = Double.parseDouble(calcText.getText());
+                toDo = "/";
+                calcText.setText("");
+            }
+        });
+        power.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = Double.parseDouble(calcText.getText());
+                toDo = "^";
+                calcText.setText("");
+            }
+        });
+        squared.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = Double.parseDouble(calcText.getText());
+                toDo = "sq";
+            }
+        });
+        cubed.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = Double.parseDouble(calcText.getText());
+                toDo = "cu";
+            }
+        });
+        equals.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpB = Double.parseDouble(calcText.getText());
+                AlgMethods.calcMethod();
+                calcText.setText(String.valueOf(AlgMethods.answer));
+            }
+        });
+        clearButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.inpA = 0;
+                AlgMethods.inpB = 0;
+                AlgMethods.answer = 0;
+                calcText.setText("");
             }
         });
     }
@@ -157,6 +240,7 @@ public class MathGUI {
         SwingUtilities.updateComponentTreeUI(frame);
         frame.pack();
         frame.setVisible(true);
+        frame.getRootPane().setDefaultButton(m.equals);
     }
 }
 

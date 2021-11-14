@@ -1,6 +1,7 @@
-public class Methods {
+public class GeoMethods {
 
     public static double varOutput = 0;
+    public static String varString;
     public static void cubeVolume() {
         varOutput = MathGUI.l * MathGUI.w * MathGUI.h;
     }
@@ -12,8 +13,13 @@ public class Methods {
         double b = MathGUI.bb;
         double c = MathGUI.bc;
         double s = ((a + b + c)/2);
-        double aOfB = Math.sqrt(s * (s-a)*(s-b)*(s-c));
-        varOutput = aOfB * MathGUI.h;
+        double aOB = (s * (s-a)*(s-b)*(s-c));
+        System.out.println(aOB);
+        if (aOB > 0) {
+            double aOfB = Math.sqrt(aOB);
+            varString = String.valueOf(aOfB * MathGUI.h);
+        } else { varString = "This is not a possible output. Please try again.";}
+
 }
     public static void cubeSurface() {
         varOutput = 2 * ((MathGUI.w * MathGUI.l) + (MathGUI.h * MathGUI.l) + (MathGUI.h + MathGUI.l));

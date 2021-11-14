@@ -9,13 +9,13 @@ public class Algebra {
         Scanner userInput = new Scanner(System.in);
         String takeInput = userInput.nextLine().toUpperCase(Locale.ROOT);
         if (takeInput.contains("EVAL")) {
-            LinearEquations linearEquation = new LinearEquations();
-            linearEquation.linearMethod();
+            /*LinearEquations linearEquation = new LinearEquations();
+            linearEquation.linearMethod();*/
 
         }
         else if (takeInput.contains("CALC")) {
-            Calculator ca = new Calculator();
-            ca.calcMethod();
+            /*Calculator ca = new Calculator();
+            ca.calcMethod();*/
         }
         else {
             System.out.println("fail");

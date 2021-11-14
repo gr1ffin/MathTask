@@ -4,7 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Calculator {
-    public void calcMethod() {
+    public void calcMethodOLD() {
         boolean repeat = true;
         while(repeat) {
             System.out.println("Here is how the calculator works. \nPut your first input, hit Enter. Then the sign (+,-,*,/,^, sq (square root)) cube (cube root), hit Enter. Finally, the second input, hit Enter. \nExample: \n1\n+\n1\nIf you would like to quit at any time, type QUIT.\nInput:\n");
