@@ -160,6 +160,30 @@
                           <text value="clear"/>
                         </properties>
                       </component>
+                      <component id="6bcc9" class="javax.swing.JButton" binding="pastUp">
+                        <constraints>
+                          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="^"/>
+                        </properties>
+                      </component>
+                      <component id="77dae" class="javax.swing.JButton" binding="pastDown">
+                        <constraints>
+                          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="v"/>
+                        </properties>
+                      </component>
+                      <component id="fdf66" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Past Calculations"/>
+                        </properties>
+                      </component>
                     </children>
                   </grid>
                   <grid id="9afe" binding="alg2" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">

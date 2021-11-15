@@ -66,6 +66,8 @@ public class MathGUI {
     private JButton equals;
     private JButton squared;
     private JButton clearButton;
+    private JButton pastUp;
+    private JButton pastDown;
     private JTextField triangleB5;
 
     public static double l = 0;
@@ -226,6 +228,22 @@ public class MathGUI {
                 AlgMethods.inpB = 0;
                 AlgMethods.answer = 0;
                 calcText.setText("");
+            }
+        });
+        pastUp.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.pastGet += 1;
+                AlgMethods.pastAnswers();
+                calcText.setText(AlgMethods.toSet);
+            }
+        });
+        pastDown.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AlgMethods.pastGet -= 1;
+                AlgMethods.pastAnswers();
+                calcText.setText(AlgMethods.toSet);
             }
         });
     }
