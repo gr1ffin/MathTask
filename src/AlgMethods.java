@@ -19,7 +19,7 @@ public class AlgMethods {
             default -> 0;
         };
         System.out.println(answer);
-        pastOperation.add(String.valueOf(inpA) + MathGUI.toDo + String.valueOf(inpB) + " = " + String.valueOf(answer));
+        pastOperation.add(inpA + MathGUI.toDo + inpB + " = " + answer);
     }
 
     public static void pastAnswers() {
